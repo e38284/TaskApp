@@ -16,6 +16,7 @@
 		ED4DC9D7224E852F00195509 /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DC9D6224E852F00195509 /* TaskAppTests.swift */; };
 		ED4DC9E2224E852F00195509 /* TaskAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DC9E1224E852F00195509 /* TaskAppUITests.swift */; };
 		ED4DC9F02251E94600195509 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DC9EF2251E94600195509 /* InputViewController.swift */; };
+		ED5E38F32253A2F400089386 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E38F22253A2F400089386 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		ED4DC9E1224E852F00195509 /* TaskAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAppUITests.swift; sourceTree = "<group>"; };
 		ED4DC9E3224E852F00195509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED4DC9EF2251E94600195509 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		ED5E38F22253A2F400089386 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,6 @@
 				C0C8D4ADCDB141A280287B94 /* Pods-TaskApp.debug.xcconfig */,
 				C34930D5E9A1E557A0BDB16F /* Pods-TaskApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -127,6 +128,7 @@
 				ED4DC9C1224E852C00195509 /* AppDelegate.swift */,
 				ED4DC9C3224E852C00195509 /* ViewController.swift */,
 				ED4DC9EF2251E94600195509 /* InputViewController.swift */,
+				ED5E38F22253A2F400089386 /* Task.swift */,
 				ED4DC9C5224E852C00195509 /* Main.storyboard */,
 				ED4DC9C8224E852F00195509 /* Assets.xcassets */,
 				ED4DC9CA224E852F00195509 /* LaunchScreen.storyboard */,
@@ -335,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5E38F32253A2F400089386 /* Task.swift in Sources */,
 				ED4DC9F02251E94600195509 /* InputViewController.swift in Sources */,
 				ED4DC9C4224E852C00195509 /* ViewController.swift in Sources */,
 				ED4DC9C2224E852C00195509 /* AppDelegate.swift in Sources */,
