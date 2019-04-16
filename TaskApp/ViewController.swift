@@ -60,8 +60,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // キャンセルボタンが押された時に呼ばれる
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
+        // キャンセルボタンを押したら、キーボードが閉じる
         self.view.endEditing(true)
+        // キャンセルボタンを押したら、検索バーを空にする
         searchBar.text = ""
+        self.taskArray = realm.objects(Task.self)
         self.tableView.reloadData()
     }
 
