@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // 日付近い順でソート：降順
     // 以降内容をアップデートするとリスト内は自動的に更新される。
     var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
-    lazy var searchResults = realm.objects(Task.self).filter("category == %@", categorySearchBar.text!)
+//    lazy var searchResults = realm.objects(Task.self).filter("category == %@", categorySearchBar.text!)
     
     
     override func viewDidLoad() {
@@ -41,18 +41,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: UITableViewDataSourceプロトコルのメソッド
     // データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if categorySearchBar.text != "" {
-            return searchResults.count
-        } else {
+//        if categorySearchBar.text != "" {
+//            return searchResults.count
+//        } else {
             return taskArray.count
-        }
+//        }
     }
     
     // 検索ボタンが押された時に呼ばれる
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
         searchBar.showsCancelButton = true
-        self.searchResults = realm.objects(Task.self).filter("category == %@", categorySearchBar.text!)
+        self.taskArray = realm.objects(Task.self).filter("category == %@", categorySearchBar.text!)
         print("反応してる？")
         self.tableView.reloadData()
     }
@@ -73,23 +73,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        let taskCell = taskArray[indexPath.row]
         
-        if categorySearchBar.text != "" {
-            // Cellに値を設定する
-            // Cellに表示されるタイトルを”textLabel”にて設定
-            cell.textLabel?.text = searchResults[indexPath.row].title
-            // Cellに表示される日付を”detailTextLabel”にて設定
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm"
-            let dateString:String = formatter.string(from: searchResults[indexPath.row].date)
-            cell.detailTextLabel?.text = dateString
-        } else {
+//        if categorySearchBar.text != "" {
+//            // Cellに値を設定する
+//            // Cellに表示されるタイトルを”textLabel”にて設定
+//            cell.textLabel?.text = searchResults[indexPath.row].title
+//            // Cellに表示される日付を”detailTextLabel”にて設定
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+//            let dateString:String = formatter.string(from: searchResults[indexPath.row].date)
+//            cell.detailTextLabel?.text = dateString
+//        } else {
             cell.textLabel?.text = taskArray[indexPath.row].title
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm"
             let dateString:String = formatter.string(from: taskArray[indexPath.row].date)
             cell.detailTextLabel?.text = dateString
-        }
-            
+//        }
+        
         return cell
     }
     
